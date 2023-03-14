@@ -1,8 +1,8 @@
 const Security = require('../security/verifyUser');
 const Revendeur = require('../services/firebaseRevendeur.service')
 const axios = require('axios')
-const { jwt } = require('jsonwebtoken');
-const { bcrypt } = require('bcryptjs')
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs')
 
 async function allProducts(req,res) {
     await Security.validateFirebaseIdToken(req, res,async() => {
